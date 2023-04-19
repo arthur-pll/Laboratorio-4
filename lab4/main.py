@@ -36,7 +36,7 @@ def registrar_usuario():
         writer.writerow(["Nombre","Contraseña"]) 
         writer.writerows(usuarios)
 
-def acceso(a):
+def acceso():
     class LoginWindow(QWidget):
         def __init__(self):
             super().__init__()
@@ -74,8 +74,6 @@ def acceso(a):
 
             if self.validate_credentials(username, password):
                 print('Acesso concedido')
-                a=1
-                return (a)
             else:
                 print('Acesso denegado')
 
@@ -177,7 +175,6 @@ def salir():
 
 def menu():
     sel=0
-    a=0
     while sel!=3:
         print("Bienvinidos a la aplicacion")
         print("elige una de las opciones:")
@@ -188,9 +185,7 @@ def menu():
         if sel==1:
             registrar_usuario()
         if sel==2:
-            a=acceso(a)
-        if a==1:
-            valor_sensor()
+            =acceso()
         if sel==3:
             salir()
 menu()
